@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Baskerville";
+    src: url("/Assets/Baskervville/Baskervville-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Century Gothic";
+    src: url("/Assets/CenturyGothic/centurygothic.ttf");
+}
+
+@font-face {
+    font-family: "Univers";
+    src: url("/Assets/Univers/UniversRegular.ttf");
+}
+
+body {
+    opacity: 0;
+    background-color: #121212;
+    color: white;
+    font-family: "Baskerville";
+}
+
+header {
+    height: 20vh;
+}
