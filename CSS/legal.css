@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Baskervville';
+    src: url("/Assets/Baskervville/Baskervville-Regular.ttf");
+}
+
+
+body {
+    font-family: 'Baskervville';
+}
+
+p {
+    font-size: 14pt;
+}

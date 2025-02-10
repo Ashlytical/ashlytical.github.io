@@ -14,27 +14,37 @@ const easingFunctions = {
 };
 
 // Function to animate opacity
-function animateOpacity(element, duration, easingName) {
-    const start = performance.now();
+function animateOpacity(elements, duration, easingName) {
     const easeFunction = easingFunctions[easingName] || easingFunctions.easeInOutQuint;
 
-    function step(timestamp) {
-        const elapsed = (timestamp - start) / duration;
-        const t = Math.min(elapsed, 1);
-        element.style.opacity = easeFunction(t);
+    // Ensure it's always an array (even if a single element)
+    elements = elements instanceof NodeList ? Array.from(elements) : [elements];
 
-        if (t < 1) {
-            requestAnimationFrame(step);
+    elements.forEach((element) => {
+        const start = performance.now();
+
+        function step(timestamp) {
+            const elapsed = (timestamp - start) / duration;
+            const t = Math.min(elapsed, 1);
+            element.style.opacity = easeFunction(t);
+
+            if (t < 1) {
+                requestAnimationFrame(step);
+            }
         }
-    }
 
-    requestAnimationFrame(step);
+        requestAnimationFrame(step);
+    });
 }
 
-// Apply easing on page load
 window.onload = function () {
     setTimeout(function(){
-        const body = document.body;
-        animateOpacity(body, 1500, "easeInOutQuint"); // Change easing here
-    }, 600);
+        const logo = document.querySelector("#AxiomLogo");
+        animateOpacity(logo, 1500, "easeInOutQuint");
+    }, 100);
+    
+    setTimeout(function(){
+        const content = document.querySelectorAll("#content, #ExperimentalLogo");
+        animateOpacity(content, 1500, "easeInOutQuint");
+    }, 2100);
 };

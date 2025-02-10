@@ -1,25 +1,82 @@
 @font-face {
-    font-family: "Baskerville";
-    src: url("/Assets/Baskervville/Baskervville-Regular.ttf");
-}
-
-@font-face {
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic';
     src: url("/Assets/CenturyGothic/centurygothic.ttf");
 }
 
 @font-face {
-    font-family: "Univers";
-    src: url("/Assets/Univers/UniversRegular.ttf");
+    font-family: 'UniversCE45L';
+    src: url("/Assets/UniversCE45L/Univers\ CE\ 45\ Light.ttf");
+}
+
+@font-face {
+    font-family: 'UniversLTU49C';
+    src: url("/Assets/UniversLTU49C/Univers\ LT\ 49\ Light\ Ultra\ Condensed.ttf");
 }
 
 body {
-    opacity: 0;
     background-color: #121212;
-    color: white;
-    font-family: "Baskerville";
+    text-align: center;
+    color: #EAEAEA;
+    font-family: "UniversCE45L";
 }
 
+nav {
+    padding-top:92px;
+}
+
+main {
+    min-height: 5555px;
+}
+
+
+
 header {
-    height: 20vh;
+    position:fixed;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    background-color: #121212;
+    border-bottom-style: solid;
+    border-color: #EAEAEA;
+    border-width: 2px;
+    padding: 15px;
+    padding-left: 40px;
+    margin: 0px;
+}
+
+#Logo {
+    display: flex;
+    flex-direction: column;
+}
+
+#content, #AxiomLogo, #ExperimentalLogo {
+    opacity: 0;
+}
+
+#AxiomLogo {
+    max-width: 100px;
+}
+
+#ExperimentalLogo {
+    max-width: 125px;
+    padding-left: 30px;
+}
+
+
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+.typed-out{
+overflow: hidden;
+border-right: .15em solid #EAEAEA;
+white-space: nowrap;
+font-size: 1.6rem;
+width: 0;
+animation: typing 2s steps(100, end) forwards;
 }
