@@ -1,16 +1,16 @@
 @font-face {
     font-family: 'Century Gothic';
-    src: url("./Assets/CenturyGothic/centurygothic.ttf");
+    src: url("../Assets/CenturyGothic/centurygothic.ttf");
 }
 
 @font-face {
     font-family: 'UniversCE45L';
-    src: url("./Assets/UniversCE45L/Univers\ CE\ 45\ Light.ttf");
+    src: url("../Assets/UniversCE45L/Univers\ CE\ 45\ Light.ttf");
 }
 
 @font-face {
     font-family: 'UniversLTU49C';
-    src: url("./Assets/UniversLTU49C/Univers\ LT\ 49\ Light\ Ultra\ Condensed.ttf");
+    src: url("../Assets/UniversLTU49C/Univers\ LT\ 49\ Light\ Ultra\ Condensed.ttf");
 }
 
 body {
